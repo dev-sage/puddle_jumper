@@ -22,8 +22,6 @@ $(document).ready(function() {
 	    };
 	}	
 
-  	L.geoJson(world_data, {style: style}).addTo(map);
-
 	var start = { x: -80, y: 34 };
 	var end = { x: 31, y: 3 };
 	var generator = new arc.GreatCircle(start, end, {'name': 'Seattle to DC'});
@@ -63,5 +61,38 @@ $(document).ready(function() {
 	}
 
 	flight_path(sling_plane);
+
+	function highlightFeature(e) {
+		var layer = e.target;
+
+		layer.setStyle({
+			weight: 0.25,
+			color: "yellow",
+			fillOpacity: 0.5
+		});
+
+		if(!L.Browser.ie && !L.Browser.opera) {
+			layer.bringToFront();
+		}
+	}
+
+	function resetHighlight(e) {
+		geojson.resetStyle(e.target);
+	}
+
+	function onEachFeature(feature, layer) {
+		layer.on({
+			mouseover: highlightFeature,
+			mouseout: resetHighlight,
+			click: zoomToFeature
+		});
+	}
+
+	function zoomToFeature(e) {
+		map.fitBounds(e.target.getBounds());
+	}
+
+	geojson = L.geoJson(world_data, {style: style,
+						   onEachFeature: onEachFeature}).addTo(map);
 });
   

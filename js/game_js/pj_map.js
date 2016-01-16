@@ -1,4 +1,7 @@
-$(document).ready(function() {
+//$(document).ready(function() {
+
+	/**********************************************************/
+	/* Create Map *********************************************/ 
 	var map = L.map("map", {zoomControl: false}).setView([35.21, -10.18], 3);
   	L.tileLayer('https://api.tiles.mapbox.com/v4/{mapid}/{z}/{x}/{y}.png?access_token={accessToken}', {
               attribution: "",
@@ -11,23 +14,17 @@ $(document).ready(function() {
   	var pop_scale = d3.scale.linear().domain([0, 140000000]).range([0, 1.0]);
 
 	map.setMaxBounds(L.latLngBounds([-100, -190], [100, 190]));
-  	
-	function style(feature) {
-	    return {
-	        weight: 0.25,
-	    	color: "black",
-	    	opacity: 1,
-	    	fillOpacity: 0
-	    	//fillOpacity: pop_scale(feature.properties.pop_est)
-	    };
-	}	
+	
+	/* End Create Map *****************************************/ 
+	/**********************************************************/
 
-	var start = { x: -80, y: 34 };
-	var end = { x: 31, y: 3 };
-	var generator = new arc.GreatCircle(start, end, {'name': 'Seattle to DC'});
-	var line = generator.Arc(100,{offset:10});
-
-	coords = line.json();
+	/**********************************************************/
+	/* Create Plane / Path ************************************/ 	
+	var plane_icon = L.icon({
+		iconUrl: 'icons/plane_right.png',
+		shadowIcon: null,
+		iconSize: [45, 45]
+	})
 
 	function reverse_coords(coords) {
 		var new_coords = Array(coords.length);
@@ -37,30 +34,45 @@ $(document).ready(function() {
 		return(new_coords);
 	}
 
-	var my_coords = reverse_coords(coords.geometry.coordinates);
+	function get_plane_path() {
+		var start = { x: -77, y: 0 };
+		var end = { x: 78, y: 40 };
+		var generator = new arc.GreatCircle(start, end);
+		var line = generator.Arc(100, { offset: 10 });
 
-	var plane_icon = L.icon({
-		iconUrl: 'icons/plane_right.png',
-		shadowIcon: null,
-		iconSize: [45, 45]
-	})
+		coords = line.json();
+		var my_coords = reverse_coords(coords.geometry.coordinates);
 
-	function flight_path(callback) {
-		var path = new L.Polyline(my_coords,
+		draw_flight_path(my_coords);
+
+	}	
+
+	function draw_flight_path(coords) {
+		var path = new L.Polyline(coords,
 	            {snakingSpeed: 800, snakingPause: 0, color: "red", opacity: 1, weight: 1.00});
 		path.addTo(map).snakeIn();
 
-		var plane_marker = L.animatedMarker(my_coords, {icon: plane_icon, 
+		var plane_marker = L.animatedMarker(coords, {icon: plane_icon, 
 													  interval: 50,
 													  });
-		setTimeout(sling_plane(plane_marker), 5000);
-	}
-	
-	function sling_plane(plane_marker) {
 		map.addLayer(plane_marker);
+
 	}
 
-	flight_path(sling_plane);
+	/* End Create Plane / Path ********************************/ 
+	/**********************************************************/
+
+
+	/**********************************************************/
+	/* Interactivity ******************************************/ 
+	function style(feature) {
+		return {
+		    weight: 0.25,
+		    color: "black",
+		    opacity: 1,
+		    fillOpacity: 0
+		};
+	}
 
 	function highlightFeature(e) {
 		var layer = e.target;
@@ -94,5 +106,8 @@ $(document).ready(function() {
 
 	geojson = L.geoJson(world_data, {style: style,
 						   onEachFeature: onEachFeature}).addTo(map);
-});
+
+	/* End Interactivity ********************************/ 
+	/****************************************************/
+//});
   

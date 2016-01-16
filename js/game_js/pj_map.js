@@ -13,10 +13,20 @@
 
   	var pop_scale = d3.scale.linear().domain([0, 140000000]).range([0, 1.0]);
 
+  	var random_path = function() { return Math.floor(Math.random() * 249); };
+
 	map.setMaxBounds(L.latLngBounds([-100, -190], [100, 190]));
 	
 	/* End Create Map *****************************************/ 
 	/**********************************************************/
+
+	/* DATA LOAD **********************************************/
+	var country_list;
+    d3.text('data/country_data/country_list.csv', function(error, _data){
+             country_list = d3.csv.parseRows(_data);
+             console.log("Finished loading country_list data.")
+        });
+    /**********************************************************/
 
 	/**********************************************************/
 	/* Create Plane / Path ************************************/ 	
@@ -35,8 +45,15 @@
 	}
 
 	function get_plane_path() {
-		var start = { x: -77, y: 0 };
-		var end = { x: 78, y: 40 };
+		console.log("Launching Plane . . . ");
+		var start_loc = random_path(), end_loc = random_path();
+		console.log("Start_loc: " + start_loc + " / End_loc: " + end_loc);
+		var start = { x: parseFloat(country_list[start_loc][1]),
+					  y: parseFloat(country_list[start_loc][2]) };
+
+		var end = { x: parseFloat(country_list[end_loc][1]),
+					  y: parseFloat(country_list[end_loc][2]) };
+
 		var generator = new arc.GreatCircle(start, end);
 		var line = generator.Arc(100, { offset: 10 });
 
@@ -45,7 +62,7 @@
 
 		draw_flight_path(my_coords);
 
-	}	
+	}
 
 	function draw_flight_path(coords) {
 		var path = new L.Polyline(coords,

@@ -1,0 +1,126 @@
+<html>
+<head>
+  <title>Mapping the Stars</title>
+  <link rel = "stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+  <script src = "js/dep/leaflet.js"></script>
+  <script src = "js/dep/L.Polyline.SnakeAnim.js"></script>
+  <script src = "js/dep/AnimatedMarker.js"></script>
+  <script src = "js/dep/arc.js"></script>
+  <script src = "js/dep/jquery-1.12.0.min.js"></script>
+
+  <style>
+
+    #map
+    {
+      height: 100%; 
+      width: 100%;
+      width: 100vw; 
+      margin-top: 10px;
+      margin: 0 auto;
+      float: left;
+      margin-top: 0px;
+      margin: 0px;
+      margin-bottom: 10px;
+    }
+
+    body 
+    {
+      margin: 0px; 
+    }
+
+    #bodyp 
+    {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    #floater
+    {
+      position: absolute; 
+      top: 0%; 
+      margin-left: 40%; 
+      opacity: 0.75;  
+      height: 50px;
+      width: 20%;
+      color: black;
+      font: impact;
+      float: left;
+      text-align: left;
+      padding: 10px;
+      padding-bottom:10px;
+      padding-top: 10px;
+      font-size: 52;
+      line-height: 50px;
+      background-color: #F62217;
+      font-family: Impact, Charcoal, serif;
+    }
+
+    #pop_graph
+    {
+      position: absolute;
+      background-color: black;
+      bottom: 0;
+      right: -20;
+      height: 300px;
+      width: 300px;
+      opacity: 0.85;
+      color: white;
+      text-align: center;
+      margin: 0px;
+    }
+
+     #floater2
+    {
+      position: absolute; 
+      bottom: 50%; 
+      margin-left: 50%; 
+      opacity: 0.75;  
+      height: 50px;
+      width: 20%;
+      color: black;
+      font: impact;
+      float: left;
+      text-align: left;
+      padding: 10px;
+      padding-bottom:10px;
+      padding-top: 10px;
+      font-size: 52;
+      line-height: 50px;
+      background-color: white;
+      font-family: Impact, white, serif;
+      color: white;
+    }
+
+    textarea:focus, input:focus{
+    outline: none;
+    }
+
+    .axis path,
+    .axis line 
+    {
+      fill: white;
+      stroke: white;
+      shape-rendering: crispEdges;
+    }
+
+    .axis text {
+      font-family: sans-serif;
+      font-size: 11px;
+      fill: white;
+    }
+
+
+  </style>
+</head>
+<body>
+
+  <center><div id = "map"></div></center>
+  <script type = "text/javascript" src = "data/country_data/countries.js"></script>
+  <script type = "text/javascript" src = "js/game_js/pj_map.js"></script>
+  <div id = "floater"><center>Game Title</center></div>
+  <div id = "pop_graph"><h2>World Population</h2></div>
+  <script type = "text/javascript" src = "js/game_js/pop_graph.js"></script>
+
+</body>
+</html>

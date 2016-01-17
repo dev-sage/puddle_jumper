@@ -44,20 +44,14 @@
 		return(new_coords);
 	}
 
-	function get_plane_path() {
-		console.log("Launching Plane . . . ");
-		var start_loc = random_path(), end_loc = random_path();
-		console.log("Start_loc: " + country_list[start_loc][0] + " / End_loc: " + country_list[end_loc][0]);
-		var start = { x: parseFloat(country_list[start_loc][2]),
-					  y: parseFloat(country_list[start_loc][1]) };
+	function launch_plane(flight) {
 
-		var end = { x: parseFloat(country_list[end_loc][2]),
-					  y: parseFloat(country_list[end_loc][1]) };
-
-		var generator = new arc.GreatCircle(start, end);
+		var generator = new arc.GreatCircle(flight.path.start_coords, flight.path.end_coords);
+		
 		var line = generator.Arc(100, { offset: 100 });
 
 		coords = line.json();
+		
 		var my_coords = reverse_coords(coords.geometry.coordinates);
 
 		draw_flight_path(my_coords);
@@ -65,6 +59,7 @@
 	}
 
 	function draw_flight_path(coords) {
+
 		var path = new L.Polyline(coords,
 	            {snakingSpeed: 800, snakingPause: 0, color: "red", opacity: 0.50, weight: 2.00, onEnd: function() {console.log("Hello"); } });
 
@@ -72,7 +67,7 @@
 
 		//Selecting appropriate icon.
 		var icon, lon_diff, lat_diff;
-		console.log(coords[coords.length]);
+		console.log(coords[coords.length - 1]);
 		lon_diff = coords[0][1] - coords[coords.length - 1][1];
 		lat_diff = coords[0][0] - coords[coords.length - 1][0];
 
@@ -92,30 +87,6 @@
 			if(Math.abs(lon_diff/lat_diff) > 1) { icon = "my_icons/plane_e.png"; }
 				else { icon = "my_icons/plane_n.png"; }
 		}
-
-
-		/*
-		if(lon_diff > 0) {
-			if(lat_diff > 0) {
-				if(lon_diff / lat_diff > 1) { icon = 'icons/plane_w.png'; }
-					else { icon = 'icons/plane_s.png' }
-			} else {
-				if(lon_diff / lat_diff > 1) {icon = 'icons/plane_w.png'; }
-					else {
-						icon = 'icons/plane_n.png';
-					}
-			}
-		} else {
-			if(lat_diff > 0) {
-				if(lon_diff / lat_diff > 1) { icon = 'icons/plane_s.png'; }
-					else { icon = 'icons/plane_e.png' }
-			} else {
-				if(lon_diff / lat_diff > 1) {icon = 'icons/plane_n.png'; }
-					else {
-						icon = 'icons/plane_e.png';
-					}
-			}
-		}*/ 
 
 		var plane_icon = L.icon({
 			iconUrl: icon,

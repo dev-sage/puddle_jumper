@@ -1,1 +1,249 @@
-English NameAndorraUnited Arab EmiratesAfghanistanAntigua and BarbudaAnguillaAlbaniaArmeniaAngolaAntarcticaArgentinaAmerican SamoaAustriaAustraliaArubaÅland IslandsAzerbaijanBosnia and HerzegovinaBarbadosBangladeshBelgiumBurkina FasoBulgariaBahrainBurundiBeninSaint BarthélemyBermudaBrunei DarussalamBoliviaCaribbean Netherlands BrazilBahamasBhutanBouvet IslandBotswanaBelarusBelizeCanadaCocos (Keeling) Islands"Congo, Democratic Republic of"Central African RepublicCongoSwitzerlandCôte d'IvoireCook IslandsChileCameroonChinaColombiaCosta RicaCubaCape VerdeCuraçaoChristmas IslandCyprusCzech RepublicGermanyDjiboutiDenmarkDominicaDominican RepublicAlgeriaEcuadorEstoniaEgyptWestern SaharaEritreaSpainEthiopiaFinlandFijiFalkland Islands"Micronesia, Federated States of"Faroe IslandsFranceGabonUnited KingdomGrenadaGeorgiaFrench GuianaGuernseyGhanaGibraltarGreenlandGambiaGuineaGuadeloupeEquatorial GuineaGreeceSouth Georgia and the South Sandwich IslandsGuatemalaGuamGuinea-BissauGuyanaHong KongHeard and McDonald IslandsHondurasCroatiaHaitiHungaryIndonesiaIrelandIsraelIsle of ManIndiaBritish Indian Ocean TerritoryIraqIranIcelandItalyJerseyJamaicaJordanJapanKenyaKyrgyzstanCambodiaKiribatiComorosSaint Kitts and NevisNorth KoreaSouth KoreaKuwaitCayman IslandsKazakhstanLao People's Democratic RepublicLebanonSaint LuciaLiechtensteinSri LankaLiberiaLesothoLithuaniaLuxembourgLatviaLibyaMoroccoMonacoMoldovaMontenegroSaint-Martin (France)MadagascarMarshall IslandsMacedoniaMaliMyanmarMongoliaMacauNorthern Mariana IslandsMartiniqueMauritaniaMontserratMaltaMauritiusMaldivesMalawiMexicoMalaysiaMozambiqueNamibiaNew CaledoniaNigerNorfolk IslandNigeriaNicaraguaThe NetherlandsNorwayNepalNauruNiueNew ZealandOmanPanamaPeruFrench PolynesiaPapua New GuineaPhilippinesPakistanPolandSt. Pierre and MiquelonPitcairnPuerto Rico"Palestine, State of"PortugalPalauParaguayQatarRéunionRomaniaSerbiaRussian FederationRwandaSaudi ArabiaSolomon IslandsSeychellesSudanSwedenSingaporeSaint HelenaSloveniaSvalbard and Jan Mayen IslandsSlovakiaSierra LeoneSan MarinoSenegalSomaliaSurinameSouth SudanSao Tome and PrincipeEl SalvadorSint Maarten (Dutch part)SyriaSwazilandTurks and Caicos IslandsChadFrench Southern TerritoriesTogoThailandTajikistanTokelauTimor-LesteTurkmenistanTunisiaTongaTurkeyTrinidad and TobagoTuvaluTaiwanTanzaniaUkraineUgandaUnited States Minor Outlying IslandsUnited StatesUruguayUzbekistanVaticanSaint Vincent and the GrenadinesVenezuelaVirgin Islands (British)Virgin Islands (U.S.)VietnamVanuatuWallis and Futuna IslandsSamoaYemenMayotteSouth AfricaZambiaZimbabwe
+"AD" "Andorra" 1 "22.3511148" "78.6677428"
+"AE" "United Arab Emirates" 2 "-23.49777295" "-68.7904131067085"
+"AF" "Afghanistan" 3 "-27.4109844" "-69.930602948491"
+"AG" "Antigua and Barbuda" 4 "26.27548455" "50.4129776943626"
+"AI" "Anguilla" 5 "25.84000695" "50.590269348596"
+"AL" "Albania" 6 "35.6696839" "140.0379871"
+"AM" "Armenia" 7 "46.0162019" "13.5489102336195"
+"AO" "Angola" 8 "40.36096065" "116.015865432186"
+"AQ" "Antarctica" 9 "45.9051384" "15.5947076"
+"AR" "Argentina" 10 "48.3201921" "4.19053966150475"
+"AS" "American Samoa" 11 "43.0542733" "2.51247145749955"
+"AT" "Austria" 12 "44.31585745" "2.50656973024198"
+"AU" "Australia" 13 "43.54242045" "5.03433373718415"
+"AW" "Aruba" 14 "49.09076485" "-0.24139500722798"
+"AX" "Åland Islands" 15 "45.0497701" "2.69971756773736"
+"AZ" "Azerbaijan" 16 "45.6667902" "0.0973050940984852"
+"BA" "Bosnia and Herzegovina" 17 "45.73027025" "-0.721277151127591"
+"BB" "Barbados" 18 "66.8385732" "14.3119733"
+"BD" "Bangladesh" 19 "45.3429047" "1.81764244061206"
+"BE" "Belgium" 20 "69.4813305" "24.0465695"
+"BF" "Burkina Faso" 21 "47.46550335" "4.74812234575117"
+"BG" "Bulgaria" 22 "48.45842215" "-2.75058673461077"
+"BH" "Bahrain" 23 "46.0593485" "2.04890101251091"
+"BI" "Burundi" 24 "45.14291985" "0.632125855865104"
+"BJ" "Benin" 25 "47.06699155" "6.23562277282045"
+"BL" "Saint Barthélemy" 26 "44.72964575" "5.20443694882273"
+"BM" "Bermuda" 27 "49.0756358" "0.96520259447748"
+"BN" "Brunei Darussalam" 28 "48.4474102" "1.39988201850208"
+"BO" "Bolivia" 29 "48.2452998" "-4.04403012572015"
+"BQ" "Caribbean Netherlands" 30 "43.960029" "4.29774285403858"
+"BR" "Brazil" 31 "43.3054546" "0.971679170190158"
+"BS" "Bahamas" 32 "43.6955276" "0.410101967523799"
+"BT" "Bhutan" 33 "44.88390205" "-0.604643838117042"
+"BV" "Bouvet Island" 34 "43.5914424" "3.35528302489692"
+"BW" "Botswana" 35 "48.17276805" "-1.64980914206811"
+"BY" "Belarus" 36 "46.81210565" "1.53820515570562"
+"BZ" "Belize" 37 "47.2232046" "0.686670252328688"
+"CA" "Canada" 38 "45.28979315" "5.63438247738623"
+"CC" "Cocos (Keeling) Islands" 39 "46.7833625" "5.7832857263549"
+"CD" "Congo, Democratic Republic of" 40 "44.00996945" "-0.643387185446738"
+"CF" "Central African Republic" 41 "47.65977515" "1.29718352539046"
+"CG" "Congo" 42 "45.75385355" "4.0454736825511"
+"CH" "Switzerland" 43 "45.08572485" "3.83382611767329"
+"CI" "Côte d'Ivoire" 44 "47.3480563" "-1.87276785414718"
+"CK" "Cook Islands" 45 "47.9140388" "2.30737946206759"
+"CL" "Chile" 46 "51.4364796" "7.1007021"
+"CM" "Cameroon" 47 "44.3691703" "0.453899113452122"
+"CN" "China" 48 "44.5425706" "3.52111464833333"
+"CO" "Colombia" 49 "47.38863045" "-0.390909664638737"
+"CR" "Costa Rica" 50 "49.0918952" "-1.24543696075455"
+"CU" "Cuba" 51 "48.961264" "4.31224359285714"
+"CV" "Cape Verde" 52 "48.1329414" "5.25291078975193"
+"CW" "Curaçao" 53 "48.1507819" "-0.649127281200709"
+"CX" "Christmas Island" 54 "48.95596825" "5.98703829975656"
+"CY" "Cyprus" 55 "49.01296845" "5.42866907663977"
+"CZ" "Czech Republic" 56 "47.82509725" "-2.76437293428771"
+"DE" "Germany" 57 "49.0207259" "6.53803517035795"
+"DJ" "Djibouti" 58 "47.11969705" "3.54523953402225"
+"DK" "Denmark" 59 "50.5293986" "3.08846316102365"
+"DM" "Dominica" 60 "49.41205455" "2.40648784690548"
+"DO" "Dominican Republic" 61 "48.57605325" "0.0446617675958816"
+"DZ" "Algeria" 62 "50.514681" "2.25731799862742"
+"EC" "Ecuador" 63 "45.7715343" "3.08399342067179"
+"EE" "Estonia" 64 "43.18718655" "-0.728247300084667"
+"EG" "Egypt" 65 "43.1433898" "0.156435301703084"
+"EH" "Western Sahara" 66 "42.6259036" "2.50671995040343"
+"ER" "Eritrea" 67 "48.5991783" "7.53381862433265"
+"ES" "Spain" 68 "47.8654746" "7.23154334757976"
+"ET" "Ethiopia" 69 "46.350351" "15.7344099"
+"FI" "Finland" 70 "47.63842335" "6.09511408893277"
+"FJ" "Fiji" 71 "46.6557086" "4.55855481835173"
+"FK" "Falkland Islands" 72 "48.02692875" "0.253821798224732"
+"FM" "Micronesia, Federated States of" 73 "45.49489515" "6.38466038137565"
+"FO" "Faroe Islands" 74 "46.06882085" "6.3445369915871"
+"FR" "France" 75 "48.85881005" "2.32003101155031"
+"GA" "Gabon" 76 "49.66323745" "0.94009442040286"
+"GB" "United Kingdom" 77 "48.6191861" "3.04170161525698"
+"GD" "Grenada" 78 "48.76203735" "1.88713756212644"
+"GE" "Georgia" 79 "46.53914" "-0.299533276480368"
+"GF" "French Guiana" 80 "49.9708401" "2.37568079441057"
+"GG" "Guernsey" 81 "43.7921741" "2.13396477226954"
+"GH" "Ghana" 82 "44.080656" "1.20506329587002"
+"GI" "Gibraltar" 83 "43.4173595" "6.26728100271036"
+"GL" "Greenland" 84 "43.99386435" "5.18188983890024"
+"GM" "Gambia" 85 "46.67577325" "-1.29144624801388"
+"GN" "Guinea" 86 "46.61211655" "0.465407009663971"
+"GP" "Guadeloupe" 87 "45.91901925" "1.20317677187629"
+"GQ" "Equatorial Guinea" 88 "48.16378605" "6.38207117359553"
+"GR" "Greece" 89 "47.85512575" "3.64504392572388"
+"GS" "South Georgia and the South Sandwich Islands" 90 "47.62923095" "6.89930115671088"
+"GT" "Guatemala" 91 "48.53034015" "2.23929180566817"
+"GU" "Guam" 92 "48.84016715" "2.19862720595133"
+"GW" "Guinea-Bissau" 93 "48.9098125" "2.4528634806147"
+"GY" "Guyana" 94 "48.7745099" "2.45434403587979"
+"HK" "Hong Kong" 95 "49.07507045" "2.20981144366838"
+"HM" "Heard and McDonald Islands" 96 "46.4230743" "15.8686353"
+"HN" "Honduras" 97 "46.7043348" "16.1550852"
+"HR" "Croatia" 98 "46.4473711" "15.6536851171043"
+"HT" "Haiti" 99 "46.0659341" "15.1829124"
+"HU" "Hungary" 100 "46.6408144" "16.0406849"
+"ID" "Indonesia" 101 "55.655487" "12.6017091757021"
+"IE" "Ireland" 102 "46.3446365" "14.1684801"
+"IL" "Israel" 103 "46.5446645" "14.9622568"
+"IM" "Isle of Man" 104 "61.8489975" "-6.91612301886872"
+"IN" "India" 105 "46.8056346" "16.035149"
+"IO" "British Indian Ocean Territory" 106 "60.6335719" "24.8695328"
+"IQ" "Iraq" 107 "46.2265194" "15.7002159"
+"IR" "Iran" 108 "46.5386688" "15.5139415"
+"IS" "Iceland" 109 "55.15376475" "14.9305419263157"
+"IT" "Italy" 110 "46.0091489" "15.3004661"
+"JE" "Jersey" 111 "61.2027188" "26.031371"
+"JM" "Jamaica" 112 "46.509144" "15.0790677"
+"JO" "Jordan" 113 "46.3897771" "15.57035"
+"JP" "Japan" 114 "18.5132181" "-72.2860208"
+"KE" "Kenya" 115 "46.4672719" "15.7677413"
+"KG" "Kyrgyzstan" 116 "42.37289" "-72.5188139"
+"KH" "Cambodia" 117 "46.2431499" "14.4191043"
+"KI" "Kiribati" 118 "38.7081111" "13.1775280529126"
+"KM" "Comoros" 119 "45.8432951" "15.3384729"
+"KN" "Saint Kitts and Nevis" 120 "46.2184438" "15.3926879"
+"KP" "North Korea" 121 "45.907782" "15.2906185"
+"KR" "South Korea" 122 "36.94868125" "-25.0308185729525"
+"KW" "Kuwait" 123 "45.985384" "14.5728547"
+"KY" "Cayman Islands" 124 "39.6107166" "2.87762562922059"
+"KZ" "Kazakhstan" 125 "35.6741363" "139.7677418"
+"LA" "Lao People's Democratic Republic" 126 "46.3769729" "15.0458514"
+"LB" "Lebanon" 127 "57.6783173" "18.6384635860988"
+"LC" "Saint Lucia" 128 "46.1828005" "13.7328983"
+"LI" "Liechtenstein" 129 "46.1489415" "15.0439634"
+"LK" "Sri Lanka" 130 "45.9087881" "15.0133999"
+"LR" "Liberia" 131 "46.3636679" "14.3095397"
+"LS" "Lesotho" 132 "46.6248885" "16.3165187"
+"LT" "Lithuania" 133 "46.3592869" "15.1150301"
+"LU" "Luxembourg" 134 "61.82742835" "25.1503851236655"
+"LV" "Latvia" 135 "46.3429502" "15.9322378625872"
+"LY" "Libya" 136 "45.8466286" "13.961222"
+"MA" "Morocco" 137 "46.3822927" "15.2957926"
+"MC" "Monaco" 138 "63.06637335" "25.2830438956555"
+"MD" "Moldova" 139 "46.2903534" "15.3045573"
+"ME" "Montenegro" 140 "45.9642496" "14.2963046"
+"MF" "Saint-Martin (France)" 141 "46.5978842" "15.1657776"
+"MG" "Madagascar" 142 "46.1322895" "14.9986448"
+"MH" "Marshall Islands" 143 "46.3860221" "16.0459879"
+"MK" "Macedonia" 144 "46.3716354" "15.3900185"
+"ML" "Mali" 145 "35.6067118" "139.6854235"
+"MM" "Myanmar" 146 "46.2257913" "14.1693085"
+"MN" "Mongolia" 147 "46.0510703" "14.1106226"
+"MO" "Macau" 148 "35.6558427" "139.7567514"
+"MP" "Northern Mariana Islands" 149 "60.0466389" "24.0054417"
+"MQ" "Martinique" 150 "45.78689875" "14.498602920815"
+"MR" "Mauritania" 151 "46.285566" "15.0397425"
+"MS" "Montserrat" 152 "46.7183929" "16.0187324"
+"MT" "Malta" 153 "46.5657214" "15.94197"
+"MU" "Mauritius" 154 "46.1348232" "15.4000622529128"
+"MV" "Maldives" 155 "46.3351752" "15.2264908"
+"MW" "Malawi" 156 "46.6515066" "16.3443719"
+"MX" "Mexico" 157 "45.7570315" "15.0590523"
+"MY" "Malaysia" 158 "46.801894" "16.0919216"
+"MZ" "Mozambique" 159 "46.41990755" "15.8239305751558"
+NA "Namibia" 160 "46.4898775" "15.6106204532787"
+"NC" "New Caledonia" 161 "46.8259935" "16.3261154"
+"NE" "Niger" 162 "46.0223241" "14.2988997"
+"NF" "Norfolk Island" 163 "46.3935401" "14.4978789"
+"NG" "Nigeria" 164 "46.2054037" "14.5394407"
+"NI" "Nicaragua" 165 "60.9281802" "24.6692633"
+"NL" "The Netherlands" 166 "35.7616749" "139.7058213"
+"NO" "Norway" 167 "62.6000152" "29.7666591"
+"NP" "Nepal" 168 "46.3947551" "15.9299623"
+"NR" "Nauru" 169 "35.7845533" "139.6794463"
+"NU" "Niue" 170 "35.7196003" "139.6631855"
+"NZ" "New Zealand" 171 "58.0645828" "-78.14914616403"
+"OM" "Oman" 172 "46.3353855" "15.8786485"
+"PA" "Panama" 173 "46.2791422" "15.0754039"
+"PE" "Peru" 174 "46.2358001" "15.0922149"
+"PF" "French Polynesia" 175 "46.5448515" "14.9150312"
+"PG" "Papua New Guinea" 176 "46.5213288" "16.2784266"
+"PH" "Philippines" 177 "35.697994" "139.8687817"
+"PK" "Pakistan" 178 "35.7668232" "139.8474565"
+"PL" "Poland" 179 "62.2393002" "25.745951"
+"PM" "St. Pierre and Miquelon" 180 "22.3984668" "113.9666951"
+"PN" "Pitcairn" 181 "46.6480619" "15.8425205"
+"PR" "Puerto Rico" 182 "61.8639814" "25.1845044"
+"PS" "Palestine, State of" 183 "45.9178093" "13.6517003813534"
+"PT" "Portugal" 184 "52.5495803" "16.6743942"
+"PW" "Palau" 185 "46.5196095" "15.8869514"
+"PY" "Paraguay" 186 "60.4743601" "25.0925118"
+"QA" "Qatar" 187 "46.5737462" "16.3405837"
+"RE" "Réunion" 188 "46.5827291" "16.1627322"
+"RO" "Romania" 189 "46.2431283" "14.947497"
+"RS" "Serbia" 190 "46.2527361" "15.1603835"
+"RU" "Russian Federation" 191 "46.2747975" "15.7925469"
+"RW" "Rwanda" 192 "46.4046083" "14.1353229"
+"SA" "Saudi Arabia" 193 "45.8304421" "14.9302357"
+"SB" "Solomon Islands" 194 "46.0440697" "14.8431229"
+"SC" "Seychelles" 195 "35.6122169" "139.742167"
+"SD" "Sudan" 196 "46.3449469" "15.996222951704"
+"SE" "Sweden" 197 "35.5625449" "139.717523"
+"SG" "Singapore" 198 "46.3169639" "15.6668625"
+"SH" "Saint Helena" 199 "35.6327723" "139.7312266"
+"SI" "Slovenia" 200 "46.3139295" "15.5783963"
+"SJ" "Svalbard and Jan Mayen Islands" 201 "45.8950676" "13.6774482284517"
+"SK" "Slovakia" 202 "60.4061996" "22.3685677"
+"SL" "Sierra Leone" 203 "35.7790549" "139.7220384"
+"SM" "San Marino" 204 "60.1537423" "24.9303292622805"
+"SN" "Senegal" 205 "64.2240872" "27.7334227"
+"SO" "Somalia" 206 "45.8635412" "15.2239467"
+"SR" "Suriname" 207 "46.3944847" "13.9912881302446"
+"SS" "South Sudan" 208 "46.0132535" "14.374089069783"
+"ST" "Sao Tome and Principe" 209 "35.6916005" "139.6952711"
+"SV" "El Salvador" 210 "56.87759205" "-78.8295361349101"
+"SX" "Sint Maarten (Dutch part)" 211 "56.97563745" "-79.6942671323543"
+"SY" "Syria" 212 "35.644239" "139.6718317"
+"SZ" "Swaziland" 213 "35.661831" "139.6671802"
+"TC" "Turks and Caicos Islands" 214 "61.8027147" "22.3965338"
+"TD" "Chad" 215 "44.0959707" "4.7189363"
+"TF" "French Southern Territories" 216 "35.6157981" "139.7088175"
+"TG" "Togo" 217 "35.7763956" "139.6942453"
+"TH" "Thailand" 218 "62.307535" "21.7077697"
+"TJ" "Tajikistan" 219 "42.1707681" "-3.7026279"
+"TK" "Tokelau" 220 "35.6674626" "139.6017915"
+"TL" "Timor-Leste" 221 "38.1828995" "15.4979283"
+"TM" "Turkmenistan" 222 "50.404905" "30.5167543"
+"TN" "Tunisia" 223 "55.88286045" "12.4752080422291"
+"TO" "Tonga" 224 "35.6379259" "139.6916555"
+"TR" "Turkey" 225 "35.7383371" "139.6615041"
+"TT" "Trinidad and Tobago" 226 "35.7430375" "139.6041197"
+"TV" "Tuvalu" 227 "50.806083" "14.049833"
+"TW" "Taiwan" 228 "35.7505578" "139.5859877"
+"TZ" "Tanzania" 229 "35.7304662" "139.7097865"
+"UA" "Ukraine" 230 "35.7301754" "139.7131851"
+"UG" "Uganda" 231 "62.385127" "21.2229123"
+"UM" "United States Minor Outlying Islands" 232 "62.431748" "22.1841988"
+"US" "United States" 233 "63.099494" "23.0686698"
+"UY" "Uruguay" 234 "50.7771149" "15.4220267"
+"UZ" "Uzbekistan" 235 "56.65141295" "-79.1885889261883"
+"VA" "Vatican" 236 "35.7316948" "139.7590391"
+"VC" "Saint Vincent and the Grenadines" 237 "35.7356388" "139.6291749"
+"VE" "Venezuela" 238 "35.7697293" "139.660762"
+"VG" "Virgin Islands (British)" 239 "35.7762655" "139.6325763"
+"VI" "Virgin Islands (U.S.)" 240 "56.639492" "-79.2023753529836"
+"VN" "Vietnam" 241 "65.803014" "24.5208776"
+"VU" "Vanuatu" 242 "35.7700129" "139.87007"
+"WF" "Wallis and Futuna Islands" 243 "35.7101201" "139.6656284"
+"WS" "Samoa" 244 "56.5807667" "-79.1429260735426"
+"YE" "Yemen" 245 "60.4000005" "25.1166696"
+"YT" "Mayotte" 246 "35.7043807" "139.5776785"
+"ZA" "South Africa" 247 "35.7020229" "139.560769"
+"ZM" "Zambia" 248 "35.6833466" "139.6580774"
+"ZW" "Zimbabwe" 249 "35.7159299" "139.6876486"

@@ -11,4 +11,4 @@ function main() {
 
 }
 
-while(game) { setInterval(main, 2000); }
+setInterval(main, 2000);

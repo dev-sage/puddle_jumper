@@ -22,7 +22,7 @@
 
 	/* DATA LOAD **********************************************/
 	var country_list;
-    d3.text('data/country_data/country_list.csv', function(error, _data){
+    d3.text("data/country_data/country_list.csv", function(error, _data){
              country_list = d3.csv.parseRows(_data);
              console.log("Finished loading country_list data.")
         });
@@ -80,17 +80,17 @@
 		if(lat_diff > 0) var s = true;
 
 		if(w && s) {
-			if(Math.abs(lon_diff/lat_diff) > 1) { icon = 'icons/plane_w.png'; }
-				else { icon = 'icons/plane_s.png'; }
+			if(Math.abs(lon_diff/lat_diff) > 1) { icon = "my_icons/plane_w.png"; }
+				else { icon = "my_icons/plane_s.png"; }
 		} else if(w && !s) {
-			if(Math.abs(lon_diff/lat_diff) > 1) { icon = 'icons/plane_w.png'; }
-				else { icon = 'icons/plane_n.png'; }
+			if(Math.abs(lon_diff/lat_diff) > 1) { icon = "my_icons/plane_w.png"; }
+				else { icon = "my_icons/plane_n.png"; }
 		} else if(!w && s) {
-			if(Math.abs(lon_diff/lat_diff) > 1) { icon = 'icons/plane_e.png'; }
-				else { icon = 'icons/plane_s.png'; }
+			if(Math.abs(lon_diff/lat_diff) > 1) { icon = "my_icons/plane_e.png"; }
+				else { icon = "my_icons/plane_s.png"; }
 		} else if(!w && !s) {
-			if(Math.abs(lon_diff/lat_diff) > 1) { icon = 'icons/plane_e.png'; }
-				else { icon = 'icons/plane_n.png'; }
+			if(Math.abs(lon_diff/lat_diff) > 1) { icon = "my_icons/plane_e.png"; }
+				else { icon = "my_icons/plane_n.png"; }
 		}
 
 

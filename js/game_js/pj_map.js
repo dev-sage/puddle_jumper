@@ -169,7 +169,10 @@
 		$prompt.fadeOut(2000, function() { $prompt.remove(); });
 
 		for(i = 0; i < target_list.length; i++) {
-			if(clicked_country == target_list[i][0]) { console.log("Saved " + clicked_country); }
+			if(clicked_country == target_list[i][0] && ((current_time - target_list[i][1]) < 5000)) {
+				console.log("Saved " + clicked_country); 
+				
+			}
 		}
 
 

@@ -81,7 +81,7 @@
 
 		//Selecting appropriate icon.
 		var icon, lon_diff, lat_diff;
-		console.log(coords[coords.length - 1]);
+		//console.log(coords[coords.length - 1]);
 		lon_diff = coords[0][1] - coords[coords.length - 1][1];
 		lat_diff = coords[0][0] - coords[coords.length - 1][0];
 
@@ -156,15 +156,24 @@
 		});
 	}
 
-	var clicked_country;
+	var clicked_country, current_time;
 	function moveToFeature(e) {
 		var $prompt = new prompt();
+		current_time = new Date().getTime();
 		map.fitBounds(e.target.getBounds());
-		clicked_country = e.target.feature.properties.name;
+		clicked_country = e.target.feature.properties.admin;
+		//console.log(e.target.feature.properties);
 
 		$("body").append($prompt);
 		$prompt.append("<center>" + clicked_country + "</center>");
 		$prompt.fadeOut(2000, function() { $prompt.remove(); });
+
+		for(i = 0; i < target_list.length; i++) {
+			if(clicked_country == target_list[i][0]) { console.log("Saved " + clicked_country); }
+		}
+
+
+
 	}
 
 	geojson = L.geoJson(world_data, {style: style,

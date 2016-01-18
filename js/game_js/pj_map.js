@@ -1,5 +1,7 @@
 //$(document).ready(function() {
 
+	var prompt = function() { return $("<div id = 'prompt'><center>You quarantined</center></div>"); }
+
 	/**********************************************************/
 	/* Create Map *********************************************/ 
 	var map = L.map("map", {zoomControl: false}).setView([35.21, -10.18], 3);
@@ -36,11 +38,23 @@
 		iconSize: [45, 45]
 	})*/ 
 
+	// Determining infected status of flight.
+	function get_infected_status() {
+
+		var chance_num = Math.floor(Math.random() * (4)) + 1;
+
+		if(chance_num == 1) { return true; }
+
+		else { return false; }
+	}
+
 	function reverse_coords(coords) {
 		var new_coords = Array(coords.length);
+
 		for(i = 0; i < coords.length; i++) {
 			new_coords[i] = [coords[i][1], coords[i][0]]
 		}
+
 		return(new_coords);
 	}
 
@@ -88,12 +102,7 @@
 				else { icon = "my_icons/plane_n.png"; }
 		}
 
-		var plane_icon = L.icon({
-			iconUrl: icon,
-			shadowIcon: null,
-			iconSize: [45, 45]
-		});
-
+		var plane_icon = L.icon({ iconUrl: icon, shadowIcon: null, iconSize: [45, 45] });
 
 		var plane_marker = L.animatedMarker(coords, {icon: plane_icon, interval: 50, 
 													 onEnd: function() {
@@ -143,12 +152,19 @@
 		layer.on({
 			mouseover: highlightFeature,
 			mouseout: resetHighlight,
-			click: zoomToFeature
+			click: moveToFeature
 		});
 	}
 
-	function zoomToFeature(e) {
+	var clicked_country;
+	function moveToFeature(e) {
+		var $prompt = new prompt();
 		map.fitBounds(e.target.getBounds());
+		clicked_country = e.target.feature.properties.name;
+
+		$("body").append($prompt);
+		$prompt.append("<center>" + clicked_country + "</center>");
+		$prompt.fadeOut(2000, function() { $prompt.remove(); });
 	}
 
 	geojson = L.geoJson(world_data, {style: style,

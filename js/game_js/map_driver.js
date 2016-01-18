@@ -1,5 +1,7 @@
 var start_time = new Date().getTime();
 var target_list = Array();
+var saved_list = Array();
+var infected_list = Array();
 function main() {
 	
 	//Launch a new plane
@@ -16,6 +18,7 @@ function main() {
 		$warning.fadeOut(4000, function() { $warning.remove(); });
 
 		target_list.push([new_flight.destination, new_flight.departure_time]);
+
 	}
 
 	//Update choropleth

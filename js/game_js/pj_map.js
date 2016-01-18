@@ -48,6 +48,13 @@
 		else { return false; }
 	}
 
+	function in_list(item, list) {
+		for(i = 0; i<list.length; i++){
+			if(item == list[i]) {return true;}
+			else {return false;}
+		}
+	}
+
 	function reverse_coords(coords) {
 		var new_coords = Array(coords.length);
 
@@ -68,11 +75,11 @@
 		
 		var my_coords = reverse_coords(coords.geometry.coordinates);
 
-		draw_flight_path(my_coords);
+		draw_flight_path(my_coords, flight);
 
 	}
 
-	function draw_flight_path(coords) {
+	function draw_flight_path(coords, flight) {
 
 		var path = new L.Polyline(coords,
 	            {snakingSpeed: 800, snakingPause: 0, color: "red", opacity: 0.50, weight: 2.00, onEnd: function() {console.log("Hello"); } });
@@ -104,13 +111,15 @@
 
 		var plane_icon = L.icon({ iconUrl: icon, shadowIcon: null, iconSize: [45, 45] });
 
-		var plane_marker = L.animatedMarker(coords, {icon: plane_icon, interval: 50, 
-													 onEnd: function() {
-													 	$(this._icon).fadeOut(1000, function() {
-													 		map.removeLayer(this);
-													 		map.removeLayer(path);
-													 	})}
-													 });
+		var plane_marker = L.animatedMarker(coords, 
+			{icon: plane_icon, interval: 50, 
+				onEnd: function() {
+					
+					if(flight.infected_status && !in_list(flight.destination, saved_list)) {infected_list.push(flight.destination)};
+
+					$(this._icon).fadeOut(1000, function() { map.removeLayer(this); map.removeLayer(path); })} 
+				});
+
 		map.addLayer(plane_marker);
 
 	}
@@ -170,8 +179,8 @@
 
 		for(i = 0; i < target_list.length; i++) {
 			if(clicked_country == target_list[i][0] && ((current_time - target_list[i][1]) < 5000)) {
-				console.log("Saved " + clicked_country); 
-				
+				saved_list.push(clicked_country);
+				console.log("Saved " + clicked_country);
 			}
 		}
 

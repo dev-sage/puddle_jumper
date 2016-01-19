@@ -40,11 +40,8 @@
 
 	// Determining infected status of flight.
 	function get_infected_status() {
-
 		var chance_num = Math.floor(Math.random() * (5)) + 1;
-
 		if(chance_num == 1) { return true; }
-
 		else { return false; }
 	}
 
@@ -57,26 +54,18 @@
 
 	function reverse_coords(coords) {
 		var new_coords = Array(coords.length);
-
 		for(i = 0; i < coords.length; i++) {
 			new_coords[i] = [coords[i][1], coords[i][0]]
 		}
-
 		return(new_coords);
 	}
 
 	function launch_plane(flight) {
-
 		var generator = new arc.GreatCircle(flight.path.start_coords, flight.path.end_coords);
-		
 		var line = generator.Arc(100, { offset: 100 });
-
 		coords = line.json();
-		
 		var my_coords = reverse_coords(coords.geometry.coordinates);
-
 		draw_flight_path(my_coords, flight);
-
 	}
 
 	function draw_flight_path(coords, flight) {

@@ -22,8 +22,12 @@ function main() {
 	}
 
 	//Update choropleth
+	update_country_layer();
 
 	//Update status (population, etc.)
-}
 
+	//set_layer(123);
+}
 setInterval(main, 2000);
+
+

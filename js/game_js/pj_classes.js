@@ -19,8 +19,10 @@ var flight = function () {
 
 	this.destination = country_list[end_loc][0];
 
-	this.infected_status = get_infected_status();
+	//this.infected_status = get_infected_status();
 
+	this.infected_status = true;
+	
 	this.departure_time = new Date().getTime();
 
 }

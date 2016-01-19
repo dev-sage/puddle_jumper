@@ -114,8 +114,11 @@
 		var plane_marker = L.animatedMarker(coords, 
 			{icon: plane_icon, interval: 50, 
 				onEnd: function() {
-					
-					if(flight.infected_status && !in_list(flight.destination, saved_list)) {infected_list.push(flight.destination)};
+
+					if(flight.infected_status && !in_list(flight.destination, saved_list)) {
+						infected_list.push(flight.destination);
+
+					};
 
 					$(this._icon).fadeOut(1000, function() { map.removeLayer(this); map.removeLayer(path); })} 
 				});
@@ -130,6 +133,28 @@
 
 	/**********************************************************/
 	/* Interactivity ******************************************/ 
+	function update_country_layer() {
+		for(layer in geojson._layers) {
+			//console.log(typeof(geojson.getLayer(layer).feature.properties.admin));
+			for(i = 0; i < infected_list.length; i++) {
+				if(infected_list[i] == geojson.getLayer(layer).feature.properties.admin) { set_layer(layer, "red"); }
+			}
+
+			for(i = 0; i < saved_list.length; i++) {
+				if(saved_list[i] == geojson.getLayer(layer).feature.properties.admin) { set_layer(layer, "green"); }
+			}
+		}
+	}
+
+	function set_layer(layer, col) {
+		console.log("Setting layer.");
+		geojson.getLayer(layer).setStyle({
+			color: col,
+			fillOpacity: 0.5
+		});
+	}
+
+
 	function style(feature) {
 		return {
 		    weight: 0.25,
@@ -140,13 +165,22 @@
 	}
 
 	function highlightFeature(e) {
-		var layer = e.target;
+		var layer = e.target;			
+		var highlight = true;
+		for(i = 0; i < infected_list.length; i++) {
+			if(infected_list[i] == e.target.feature.properties.admin) { highlight = false; }
+		}
 
-		layer.setStyle({
-			weight: 0.25,
-			color: "yellow",
-			fillOpacity: 0.5
-		});
+		for(i = 0; i < saved_list.length; i++) {
+			if(saved_list[i] == e.target.feature.properties.admin) { highlight = false; }
+		}
+
+		if(highlight) {
+			layer.setStyle({
+						weight: 0.25,
+						color: "yellow",
+						fillOpacity: 0.5
+					}); }
 
 		if(!L.Browser.ie && !L.Browser.opera) {
 			layer.bringToFront();
@@ -154,8 +188,17 @@
 	}
 
 	function resetHighlight(e) {
-		geojson.resetStyle(e.target);
-	}
+		var reset = true;
+		for(i = 0; i < infected_list.length; i++) {
+			if(infected_list[i] == e.target.feature.properties.admin) { reset = false; }
+		}
+
+		for(i = 0; i < saved_list.length; i++) {
+			if(saved_list[i] == e.target.feature.properties.admin) { reset = false; }
+		}
+
+		if(reset) { geojson.resetStyle(e.target); }
+	} 
 
 	function onEachFeature(feature, layer) {
 		layer.on({

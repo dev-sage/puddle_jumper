@@ -28,6 +28,6 @@ function main() {
 
 	//set_layer(123);
 }
-setInterval(main, 2000);
+setInterval(main, 1250);
 
 

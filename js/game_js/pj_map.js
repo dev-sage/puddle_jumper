@@ -41,7 +41,7 @@
 	// Determining infected status of flight.
 	function get_infected_status() {
 
-		var chance_num = Math.floor(Math.random() * (4)) + 1;
+		var chance_num = Math.floor(Math.random() * (5)) + 1;
 
 		if(chance_num == 1) { return true; }
 
@@ -117,7 +117,6 @@
 
 					if(flight.infected_status && !in_list(flight.destination, saved_list)) {
 						infected_list.push(flight.destination);
-
 					};
 
 					$(this._icon).fadeOut(1000, function() { map.removeLayer(this); map.removeLayer(path); })} 
@@ -147,8 +146,7 @@
 	}
 
 	function set_layer(layer, col) {
-		console.log("Setting layer.");
-		geojson.getLayer(layer).setStyle({
+			geojson.getLayer(layer).setStyle({
 			color: col,
 			fillOpacity: 0.5
 		});

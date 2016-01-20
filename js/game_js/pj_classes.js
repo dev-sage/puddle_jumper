@@ -11,7 +11,7 @@ var path = function(start_loc, end_loc) {
 // Define the flight class
 var flight = function () {
 
-	var start_loc = random_path(), end_loc = random_path();
+	var start_loc = _.sample(populate_array(country_list), 1), end_loc = _.sample(populate_array(country_list), 1);
 
 	this.path = new path(start_loc, end_loc);
 

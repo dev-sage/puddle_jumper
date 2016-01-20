@@ -13,21 +13,38 @@
               accessToken: 'pk.eyJ1IjoiZWxzYWdlIiwiYSI6ImNpamRwYWJrMzAwYWF1dW0wYjhodW94cWIifQ.VyG5_na-uMb7-G14DZgRlQ'
               }).addTo(map);
 
-  	var pop_scale = d3.scale.linear().domain([0, 140000000]).range([0, 1.0]);
-
-  	var random_path = function() { return Math.floor(Math.random() * 249); };
-
 	map.setMaxBounds(L.latLngBounds([-100, -190], [100, 190]));
 	
 	/* End Create Map *****************************************/ 
 	/**********************************************************/
 
 	/* DATA LOAD **********************************************/
-	var country_list;
+    var world_pop;
+    d3.text("data/country_data/world_pop.csv", function(error, _data){
+             world_pop = d3.csv.parseRows(_data);
+             world_pop = char_to_int(world_pop);
+             console.log("Finished loading world_pop data.")
+        });
+
+    var country_list; var new_country_list = Array();
     d3.text("data/country_data/country_list.csv", function(error, _data){
              country_list = d3.csv.parseRows(_data);
+             for(i = 0; i < world_pop.length; i++) {
+          		for(j = 0; j < country_list.length; j++) {
+          			if(country_list[j][0] == world_pop[i][0]) { new_country_list.push(country_list[j]) };
+          		}	
+             }
+             country_list = new_country_list;
              console.log("Finished loading country_list data.")
         });
+
+
+    function char_to_int(data) {
+    	for(i = 0; i < data.length; i++) {
+    		data[i][2] = parseInt(data[i][2]);
+    	}
+    	return(data);
+    }
     /**********************************************************/
 
 	/**********************************************************/
@@ -38,9 +55,21 @@
 		iconSize: [45, 45]
 	})*/ 
 
-	// Determining infected status of flight.
+	// StackExchange Function
+	function numberWithCommas(x) {
+	    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+
+	function populate_array(list) {
+		var new_array = Array(list[0].length);
+		for(i = 0; i < list.length; i++) {
+			new_array.push(i);
+		}
+		return(new_array);
+	}
+
 	function get_infected_status() {
-		var chance_num = Math.floor(Math.random() * (5)) + 1;
+		var chance_num = Math.floor(Math.random() * (2)) + 1;
 		if(chance_num == 1) { return true; }
 		else { return false; }
 	}
@@ -106,6 +135,9 @@
 
 					if(flight.infected_status && !in_list(flight.destination, saved_list)) {
 						infected_list.push(flight.destination);
+						for(i = 0; i < world_pop.length; i++) {
+							if(flight.destination == world_pop[i][0]) { infected_count += world_pop[i][2]; break; }
+						}
 					};
 
 					$(this._icon).fadeOut(1000, function() { map.removeLayer(this); map.removeLayer(path); })} 
